@@ -131,5 +131,16 @@
 	window.addEventListener('touchmove', function(event) {
     event.preventDefault();
 	});
+	window.addEventListener('load', function(e) {
+	  window.applicationCache.addEventListener('updateready', function(e) {
+	    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+	      window.applicationCache.swapCache();
+	      if (confirm('アプリケーションキャッシュを更新しました。リロードしますか？')) {
+	        window.location.reload();
+	      }
+	    } else {
+	    }
+	  }, false);
+	}, false);
 </script>
 </html>
