@@ -71,14 +71,29 @@
 		color: white;
 		background: #010920;
 		overflow: hidden;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+	  	  -ms-flex-pack: center;
+	    	    justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+	  	  -ms-flex-align: center;
+	    	    align-items: center;
+		-webkit-transition: .3s;
+		-o-transition: .3s;
 		transition: .3s;
 		-webkit-font-smoothing: antialiased;
 	}
 	div {
 		text-align: center;
+	}
+	a {
+		-webkit-touch-callout:none;
+		-webkit-tap-highlight-color:(0,0,0,0);
 	}
 	#clock {
 		font-size: 90px;
@@ -88,17 +103,19 @@
 	}
 	@media screen and (max-width: 479px) and (orientation: portrait) {
 		body {
-			transform:rotate(-90deg);
+			-webkit-transform:rotate(-90deg);
+		  	  -ms-transform:rotate(-90deg);
+		    	    transform:rotate(-90deg);
 		}
 	}
 	.sticky {
-	    position: -webkit-sticky;
-	    position: sticky;
-	    top: 0;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
 	}
 	.sticky:before,.sticky:after {
-	    content: '';
-	    display: table;
+			content: '';
+			display: table;
 	}
 </style>
 <script>
